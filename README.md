@@ -9,24 +9,22 @@
 - Implement a scheduling algorithm for an elevator system.  
 
 ## Group Members
-- [Member Name]: [School Email]  
+- [Noah Seay]: [njs23c@fsu.edu]  
 - [Member Name]: [School Email]  
 - [Member Name]: [School Email]  
 
 ## Division of Labor
-### Part 1: System Call Tracing
+### System Call Tracing
+- **Responsibilities:** [Description]  
+- **Assigned to:** [Noah Seay]  
+
+### Timer Kernel Module
 - **Responsibilities:** [Description]  
 - **Assigned to:** [Member(s)]  
-
-### Part 2: Timer Kernel Module
-- **Responsibilities:** [Description]  
-- **Assigned to:** [Member(s)]  
-
-### Part 3: Elevator Module
 
 #### Adding System Calls
 - **Responsibilities:** [Description]  
-- **Assigned to:** [Member(s)]  
+- **Assigned to:** [Noah Seay + Amadou Landoure]  
 
 #### Kernel Compilation
 - **Responsibilities:** [Description]  
@@ -38,7 +36,7 @@
 
 #### Linked List
 - **Responsibilities:** [Description]  
-- **Assigned to:** [Member(s)]  
+- **Assigned to:** [Noah Seay]  
 
 #### Mutexes
 - **Responsibilities:** [Description]  
@@ -46,6 +44,6 @@
 
 #### Scheduling Algorithm
 - **Responsibilities:** [Description]  
-- **Assigned to:** [Member(s)]  
+- **Assigned to:** [Noah Seay + Lucas Compton + Amadou Landoure]  
 
 ## File Listing
