@@ -1,1 +1,16 @@
 _codeql_detected_source_root
+
+# Kernel module build artifacts
+*.ko
+*.o
+*.mod
+*.mod.c
+*.mod.o
+*.cmd
+*.order
+*.symvers
+.tmp_versions/
+
+# Part 1 executables
+part1/empty
+part1/part1
