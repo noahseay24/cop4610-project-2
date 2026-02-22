@@ -9,7 +9,7 @@
 - Implement a scheduling algorithm for an elevator system.  
 
 ## Group Members
-- [Noah Seay]: [njs23c@fsu.edu]  
+- [Noah Seay]: [njs23c@fsu.edu]
 - [Member Name]: [School Email]  
 - [Member Name]: [School Email]  
 
