@@ -47,3 +47,149 @@
 - **Assigned to:** [Noah Seay + Lucas Compton + Amadou Landoure]  
 
 ## File Listing
+```
+cop4610-project2/
+│
+├── part1/
+│   ├── empty.c
+│   ├── empty.trace
+│   ├── part1.c
+│   ├── part1.trace
+│   └── Makefile
+│
+├── part2/
+│   ├── src/
+│   └── Makefile
+│
+├── part3/
+│   ├── src/
+│   ├── Makefile
+│   ├── syscalls.c
+│   └── Makefile
+│
+└── README.md
+```
+- **part1:** Contains system call tracing files  
+- **part2:** Contains timer kernel module source files  
+- **part3:** Contains elevator kernel module and system calls  
+
+## How to Compile & Execute
+
+### Requirements
+- Compiler: `gcc`  
+- Kernel Version: Linux kernel 6.16.x  
+
+### Part 1: System Call Tracing
+**Compilation**
+```bash
+cd part1
+gcc -o empty empty.c
+gcc -o part1 part1.c
+```
+**Execution**
+```bash
+strace -o empty.trace ./empty
+strace -o part1.trace ./part1
+```
+
+### Part 2: Timer Kernel Module
+**Compilation**
+```bash
+cd part2
+make
+```
+**Insert Module**
+```bash
+sudo insmod my_timer.ko
+```
+**View Output**
+```bash
+cat /proc/timer
+```
+**Remove Module**
+```bash
+sudo rmmod my_timer
+```
+
+### Part 3: Elevator Kernel Module
+**Compile Modified Kernel**
+```bash
+make menuconfig
+make -j$(nproc)
+sudo make modules_install
+sudo make install
+sudo reboot
+```
+**Verify Kernel Installation**
+```bash
+uname -r
+```
+**Test System Calls**
+```bash
+cd part3
+make
+sudo insmod syscalls.ko
+./test_syscalls
+```
+**Compile Elevator Module**
+```bash
+cd part3
+make
+```
+**Insert Elevator Module**
+```bash
+sudo insmod elevator.ko
+```
+**View Elevator Status**
+```bash
+cat /proc/elevator
+```
+**Remove Elevator Module**
+```bash
+sudo rmmod elevator
+```
+**Test Elevator**
+```bash
+./consumer --start
+./producer [number_of_passengers]
+./consumer --stop
+```
+
+## Development Log
+**Each member records their contributions here.**
+
+[Member 1]  
+| Date       | Work Completed / Notes |
+|-----------|-----------------------|
+| YYYY-MM-DD | [Description]         |
+| YYYY-MM-DD | [Description]         |
+
+[Member 2]  
+| Date       | Work Completed / Notes |
+|-----------|-----------------------|
+| YYYY-MM-DD | [Description]         |
+| YYYY-MM-DD | [Description]         |
+
+[Member 3]  
+| Date       | Work Completed / Notes |
+|-----------|-----------------------|
+| YYYY-MM-DD | [Description]         |
+| YYYY-MM-DD | [Description]         |
+
+## Meetings
+| Date       | Attendees         | Topics Discussed | Outcomes / Decisions |
+|-----------|-----------------|-----------------|--------------------|
+| YYYY-MM-DD | [Names]         | [Discussion]    | [Outcome]           |
+| YYYY-MM-DD | [Names]         | [Discussion]    | [Outcome]           |
+
+## Bugs
+[Describe any known bugs or write “No known bugs”]  
+
+## Extra Credit
+[If applicable]  
+
+## Considerations
+- All source files are organized into their required directories  
+- No binaries or compiled kernel modules are included in the repository
+
+
