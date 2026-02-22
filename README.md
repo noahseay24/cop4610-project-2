@@ -158,7 +158,7 @@ sudo rmmod elevator
 ## Development Log
 **Each member records their contributions here.**
 
-[Member 1]  
+[Noah Seay]  
 | Date       | Work Completed / Notes |
 |-----------|-----------------------|
 | YYYY-MM-DD | [Description]         |
